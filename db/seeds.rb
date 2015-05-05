@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -355,5 +354,3 @@ dinners = Restaurant.create([
     image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/GNo2rqW-mNXQns5nGd4acg/l.jpg"
   },
 ])
-=======
->>>>>>> 48320febbd44dee1a208dc777ca66b6c29dea88b
