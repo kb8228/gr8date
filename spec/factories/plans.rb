@@ -3,7 +3,7 @@ FactoryGirl.define do
     date "2015-05-04"
     time "2015-05-04 18:44:55"
     location "MyString"
-    user nil
+    # user nil
   end
 
 end

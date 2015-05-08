@@ -8,6 +8,18 @@ Rails.application.routes.draw do
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
 
+  # Plan Routes
+  get "plans/" => "plans#index"
+  post "plans/" => "plans#create"
+  delete "plans/" => "plans#destroy"
+
+  get "plans/:id" => "plans#show", as: :plan
+  get "plans" => "plans#new"
+  post "plans/:id/edit" => "plans#edit", as: :edit_movie
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
