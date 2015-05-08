@@ -56,11 +56,35 @@ RSpec.describe EventsController, :type => :controller do
     it "assigns an event to @event" do
       expect(assigns(:event)).to eq(@event1)
     end
+  end
 
+
+
+  describe "GET #new" do
+    before do
+      get :new
+    end
+
+    it "renders the new template with status 200" do
+      expect(response).to render_template :new
+      expect(response).to have_http_status(200)
+    end
+
+    it "is not persisted" do
+      expect {Event.new}.to change(Event, :count).by(0)
+    end
+  end
+
+
+
+  describe "POST #create" do
+
+    it "persists an item to the DB" do
+      expect{Event.create(event_name: "new", event_date: "new", event_time: "new", venue_name: "new", address: "new", phone: "new", category: "new", venue_url: "new")}.to change(Event, :count).by(1)
+    end
   end
 
 end
-
 
 
 
