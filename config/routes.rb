@@ -1,8 +1,27 @@
 Rails.application.routes.draw do
-
+  root "users#index"
   # User routes
-  resources :users
-  
+  #resources :users
+  get "users" => "users#index"
+  get "users/new" => "users#new", as: :new_user
+  post "users" => "users#create"
+  get "users/:id" => "users#show", as: :user
+
+  get "users/:id/edit" => "users#edit", as: :edit_user
+  put "users/:id" => "users#update"
+  patch "users/:id" => "users#update"
+  delete"users/:id" => "users#destroy"
+
+  #RAKE ROUTES:
+  #     users GET    /users(.:format)          users#index
+  #           POST   /users(.:format)          users#create
+  #  new_user GET    /users/new(.:format)      users#new
+  # edit_user GET    /users/:id/edit(.:format) users#edit
+  #      user GET    /users/:id(.:format)      users#show
+  #           PATCH  /users/:id(.:format)      users#update
+  #           PUT    /users/:id(.:format)      users#update
+  #           DELETE /users/:id(.:format)      users#destroy
+
   # Session routes
   get "login" => "sessions#new"
   post "login" => "sessions#create"

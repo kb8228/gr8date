@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.all
   end
 
   def show
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id.to_s #logs in user automatically upon signup
       flash[:welcome] = "Welcome, #{@user.name}!"
-      redirect_to user_path
+      redirect_to user_path(@user)
     else
       render :new
     end
@@ -27,9 +28,21 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find(params[:id])
+
+    if @user.update(user_params)
+      flash[:message] = "Your info was updated!"
+      redirect_to user_path(@user)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    current_user = nil
+    redirect_to root_path
   end
 
 
