@@ -1,0 +1,39 @@
+<div>
+  <%= form_for @user do |f| %>
+
+    <% if @user.errors.any? %>
+      <div>
+        <h4>So sorry, please fix <%= pluralize(@user.errors.count, "error") %>:</h4>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg.downcase %></li>
+            <% end %>
+          </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name, :value => @user.name %>
+    </div>
+
+    <div>
+      <%= f.label :email %>
+      <%= f.text_field :email, :value => @user.email %>
+    </div>
+
+    <div>
+      <%= f.label :password %>
+      <%= f.password_field :password, :placeholder => "new password" %>
+    </div>
+
+    <div>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, :placeholder => "retype new password" %>
+    </div>
+
+    <%= f.submit "Update my profile!", method: :patch %>
+
+    <%= link_to "Delete my profile", user_path(@user), method: :delete, data: {confirm: "Are you sure?"} %>
+  <% end %>
+</div>

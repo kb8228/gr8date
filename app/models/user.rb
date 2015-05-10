@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
   validates :password, presence: true, confirmation: true, length: { in: 6..20 }, on: :create
+  validates :password, confirmation: true, length: { in: 6..20 }, on: :update, :if => "password"
 
   private
   def format_user_input
