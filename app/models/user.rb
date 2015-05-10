@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   
   attr_reader :password
 
+
   #Creating PW digest entry for user:
   def password=(unencrypted_password)
     if not(unencrypted_password.nil? or unencrypted_password.empty?)
@@ -16,6 +17,7 @@ class User < ActiveRecord::Base
       self.password_digest = BCrypt::Password.create(unencrypted_password)
     end
   end
+
 
   def authenticate(unencrypted_password)
     if BCrypt::Password.new(self.password_digest) == unencrypted_password
@@ -37,3 +39,5 @@ class User < ActiveRecord::Base
   end
 
 end # User class ends
+
+
