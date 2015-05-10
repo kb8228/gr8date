@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id.to_s #logs in user automatically upon signup
       flash[:welcome] = "Welcome, #{@user.name}!"
-      redirect_to user_path
+      redirect_to user_path(@user)
     else
       render :new
     end
