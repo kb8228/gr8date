@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :plans
   before_save :format_user_input
   #has_secure_password 
   #- read up on this and maybe use instead of authenticate?
