@@ -12,11 +12,28 @@ class PlansController < ApplicationController
 
     def show
         @plan = Plan.find(params[:id])
+      @plan = Plan.new
     end
 
-    def edit
+    def create
+      @user = current_user
+      @plan = @user.plans.new(plan_params)
+
+      if @plan.save
+        redirect_to plan_path(@plan)
+      else
+        render :new
+      end
+      
+    end
+
+    def show
         @plan = Plan.find(params[:id])
     end
+
+    # def edit
+    #     @plan = Plan.find(params[:id])
+    # end
 
     def destroy
         @plan = Plan.find(params[:id])
@@ -24,5 +41,9 @@ class PlansController < ApplicationController
         redirect_to plans_path
     end
 
+    private
+    def plan_params
+        params.require(:plan).permit(:user_id, :date, :time, :location)
+    end
 
 end
