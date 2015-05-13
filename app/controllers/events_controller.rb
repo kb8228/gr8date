@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
  
-    respond_to do | format |
+    respond_to do |format|
       format.html { render :index }
       format.json { render json: @events }
     end
@@ -14,7 +14,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
 
-    respond_to do | format |
+    respond_to do |format|
       format.html { render :show }
       format.json { render json: @event }
     end
@@ -28,14 +28,14 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
 
     respond_to do |format|
-        if @event.save
-          format.html { redirect_to @event, notice: 'Event was successfully created.' }
-          format.json { render :show, status: :created, location: @event}
-        else
-          format.html { render :new }
-          format.json { render json: @event.errors, status: :unprocessable_entity }
-        end
+      if @event.save
+        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.json { render :show, status: :created, location: @event}
+      else
+        format.html { render :new }
+        format.json { render json: @event.errors, status: :unprocessable_entity }
       end
+    end
   end
 
   def edit

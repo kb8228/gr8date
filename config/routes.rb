@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "landingpage#index"
+  root "plans#new"
   # User routes
 
   # User routes:
@@ -28,21 +28,20 @@ Rails.application.routes.draw do
   delete "plans/:id" => "plans#destroy"
 
 
-
-
   # Events routes:
-  get "/events" => "events#index"
-  get "/events/:id" => "events#show", as: :event 
-  get "/events/new" => "events#new", as: :new_event
-  post "/events" => "events#create"
-  get "/events/:id/edit" => "events#edit", as: :edit_event
+  get "events" => "events#index"
+  get "events/new" => "events#new", as: :new_event
+  post "events" => "events#create"
+  get "events/:id" => "events#show", as: :event 
+  get "events/:id/edit" => "events#edit", as: :edit_event
 
   # Dinner routes:
-  get "/dinners" => "dinners#index"
-  get "/dinners/:id" => "dinners#show", as: :dinner 
-  get "/dinners/new" => "dinners#new", as: :new_dinner
-  post "/dinners" => "dinners#create"
-  get "/dinners/:id/edit" => "dinners#edit", as: :edit_dinner
+  get "dinners" => "dinners#index"
+  get "dinners/new" => "dinners#new", as: :new_dinner
+  post "dinners" => "dinners#create"
+  get "dinners/:id" => "dinners#show", as: :dinner 
+  get "dinners/:id/edit" => "dinners#edit", as: :edit_dinner
+  delete "dinners/:id" => "dinners#destroy"
 
 
 end
