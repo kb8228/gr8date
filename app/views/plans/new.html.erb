@@ -1,0 +1,17 @@
+<h1>Plan a new date</h1>
+
+<%= form_for @plan do |f| %>
+
+  <div>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :time %>
+    <%= f.time_field :time %>
+  </div>
+
+  <%= f.submit "Plan my date!" %> 
+
+<% end %>
