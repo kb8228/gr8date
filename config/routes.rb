@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get "users/new" => "users#new", as: :new_user
   post "users" => "users#create"
   get "users/:id" => "users#show", as: :user
-
   get "users/:id/edit" => "users#edit", as: :edit_user
   put "users/:id" => "users#update"
   patch "users/:id" => "users#update"
@@ -23,11 +22,10 @@ Rails.application.routes.draw do
   get "plans/" => "plans#index"
   get "plans/new" => "plans#new", as: :new_plan
   post "plans/" => "plans#create"
-
-  delete "plans/" => "plans#destroy"
-  get "plans/new" => "plans#new", as: :new_plan
-  post "plans/:id/edit" => "plans#edit", as: :edit_plan
   get "plans/:id" => "plans#show", as: :plan
+  post "plans/:id/edit" => "plans#edit", as: :edit_plan
+  put "plans/:id" => "plans#update"
+  patch "plans/:id" => "plans#update"
 
   delete "plans/:id" => "plans#destroy"
 
@@ -37,6 +35,9 @@ Rails.application.routes.draw do
   post "events" => "events#create"
   get "events/:id" => "events#show", as: :event 
   get "events/:id/edit" => "events#edit", as: :edit_event
+  put "events/:id" => "events#update"
+  patch "events/:id" => "events#update"
+  delete "events/:id" => "events#destroy"
 
   # Dinner routes:
   get "dinners" => "dinners#index"
@@ -44,6 +45,8 @@ Rails.application.routes.draw do
   post "dinners" => "dinners#create"
   get "dinners/:id" => "dinners#show", as: :dinner 
   get "dinners/:id/edit" => "dinners#edit", as: :edit_dinner
+  put "dinners/:id" => "dinners#update"
+  patch "dinners/:id" => "dinners#update"
   delete "dinners/:id" => "dinners#destroy"
 
 
