@@ -24,8 +24,9 @@ Rails.application.routes.draw do
   post "plans/" => "plans#create"
   delete "plans/" => "plans#destroy"
 
+  get "plans/new" => "plans#new", as: :new_plan
   get "plans/:id" => "plans#show", as: :plan
-  get "plans" => "plans#new"
+  get "plans/:id" => "plans#destroy"
   post "plans/:id/edit" => "plans#edit", as: :edit_movie
 
 
