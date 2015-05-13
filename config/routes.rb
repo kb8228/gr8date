@@ -23,10 +23,13 @@ Rails.application.routes.draw do
   get "plans/" => "plans#index"
   get "plans/new" => "plans#new", as: :new_plan
   post "plans/" => "plans#create"
-  get "plans/:id" => "plans#show", as: :plan
-  #post "plans/:id/edit" => "plans#edit", as: :edit_plan
-  delete "plans/:id" => "plans#destroy"
 
+  delete "plans/" => "plans#destroy"
+  get "plans/new" => "plans#new", as: :new_plan
+  post "plans/:id/edit" => "plans#edit", as: :edit_plan
+  get "plans/:id" => "plans#show", as: :plan
+
+  delete "plans/:id" => "plans#destroy"
 
   # Events routes:
   get "events" => "events#index"

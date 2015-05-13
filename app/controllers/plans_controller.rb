@@ -4,6 +4,14 @@ class PlansController < ApplicationController
     end
 
     def new
+        @plan = Plan.new
+    end
+
+    def create
+    end
+
+    def show
+        @plan = Plan.find(params[:id])
       @plan = Plan.new
     end
 
@@ -20,6 +28,7 @@ class PlansController < ApplicationController
           format.json { render json: @plan.errors, status: :unprocessable_entity }
         end
       end
+      
     end
 
     def show
