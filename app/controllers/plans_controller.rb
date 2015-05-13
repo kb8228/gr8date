@@ -3,6 +3,13 @@ class PlansController < ApplicationController
         @plans = Plan.all
     end
 
+    def new
+        @plan = Plan.new
+    end
+
+    def create
+    end
+
     def show
         @plan = Plan.find(params[:id])
     end
