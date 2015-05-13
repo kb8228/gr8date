@@ -16,7 +16,6 @@ class PlansController < ApplicationController
       @user = current_user
       @plan = @user.plans.create(plan_params)
       logger.debug @user.inspect + "\n"
-      logger.debug @plan.inspect + "\n"
 
       respond_to do |format|
         if @plan.save
@@ -33,9 +32,9 @@ class PlansController < ApplicationController
         @plan = Plan.find(params[:id])
     end
 
-    # def edit
-    #     @plan = Plan.find(params[:id])
-    # end
+    def edit
+        @plan = Plan.find(params[:id])
+    end
 
     def destroy
         @plan = Plan.find(params[:id])

@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150513023436) do
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20150513024045) do
+=======
+
+ActiveRecord::Schema.define(version: 20150513003439) do
+
+ActiveRecord::Schema.define(version: 20150512013738) do
+>>>>>>> c8f55d4c1fd3a22fc61e9ac897095122c28f4464
+
+>>>>>>> 1490e435c6e701e4046db273b9f817400cef20e1
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,13 +31,14 @@ ActiveRecord::Schema.define(version: 20150513023436) do
   create_table "dinners", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
-    t.string   "phone"
-    t.string   "type"
+    t.string   "phone_number"
     t.string   "cuisine"
     t.datetime "datetime"
     t.string   "alcohol"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "hours"
+    t.string   "image_url"
   end
 
   create_table "events", force: :cascade do |t|
