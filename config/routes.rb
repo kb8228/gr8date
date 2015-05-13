@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "events#index"
+  root "landingpage#index"
   # User routes
 
   # User routes:
@@ -37,6 +37,13 @@ Rails.application.routes.draw do
   get "/events/new" => "events#new", as: :new_event
   post "/events" => "events#create"
   get "/events/:id/edit" => "events#edit", as: :edit_event
+
+  # Dinner routes:
+  get "/dinners" => "dinners#index"
+  get "/dinners/:id" => "dinners#show", as: :dinner 
+  get "/dinners/new" => "dinners#new", as: :new_dinner
+  post "/dinners" => "dinners#create"
+  get "/dinners/:id/edit" => "dinners#edit", as: :edit_dinner
 
 
 end
