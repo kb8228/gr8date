@@ -2,11 +2,11 @@ module API
   class DinnersController < ApplicationController
 
     def index
-      render json: = Dinner.all
+      render json: Dinner.all
     end
 
     def show
-      render json: = Dinner.find(params[:id])
+      render json: Dinner.find(params[:id])
     end
 
 
@@ -42,5 +42,5 @@ module API
   #   def dinner_params
   #     params.require(:dinner).permit(:plan_id, :date, :time, :location)
   #   end
-  # end
+  end
 end

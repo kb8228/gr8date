@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get "plans/new" => "plans#new", as: :new_plan
   post "plans/" => "plans#create"
   get "plans/:id" => "plans#show", as: :plan
-  post "plans/:id/edit" => "plans#edit", as: :edit_plan
+  get "plans/:id/edit" => "plans#edit", as: :edit_plan
   put "plans/:id" => "plans#update"
   patch "plans/:id" => "plans#update"
 

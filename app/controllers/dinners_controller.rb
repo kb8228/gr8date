@@ -15,12 +15,10 @@ class DinnersController < ApplicationController
   def create
     @dinner = Dinner.new(dinner_params)
 
-    respond_to do |format|
-      if @dinner.save
-        redirect_to dinner_path(@dinner), notice: 'Dinner was successfully created.' 
-      else
-        render :new
-      end
+    if @dinner.save
+      redirect_to dinner_path(@dinner), notice: 'Dinner was successfully created.' 
+    else
+      render :new
     end
   end
 
