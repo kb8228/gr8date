@@ -7,9 +7,6 @@ class PlansController < ApplicationController
         @plan = Plan.new
     end
 
-    def create
-    end
-
     def show
         @plan = Plan.find(params[:id])
       @plan = Plan.new
@@ -17,7 +14,8 @@ class PlansController < ApplicationController
 
     def create
       @user = current_user
-      @plan = @user.plans.new(plan_params)
+      @plan = @user.plans.create(plan_params)
+      logger.debug @user.inspect + "\n"
 
       respond_to do |format|
         if @plan.save
@@ -28,7 +26,6 @@ class PlansController < ApplicationController
           format.json { render json: @plan.errors, status: :unprocessable_entity }
         end
       end
-      
     end
 
     def show

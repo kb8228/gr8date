@@ -48,10 +48,10 @@ ActiveRecord::Schema.define(version: 20150513024045) do
   create_table "plans", force: :cascade do |t|
     t.date     "date"
     t.time     "time"
-    t.string   "location"
+    t.string   "location",   default: "Santa Monica"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.integer  "event_id"
   end
 
