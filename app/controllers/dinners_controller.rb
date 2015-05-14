@@ -2,11 +2,6 @@ class DinnersController < ApplicationController
 
   def index
     @dinners = Dinner.all
-
-    respond_to do |format|
-      format.html { render :index }
-      format.json { render json: @dinners }
-    end
   end
 
   def new
@@ -15,11 +10,6 @@ class DinnersController < ApplicationController
 
   def show
     @dinner = Dinner.find(params[:id])
-
-    respond_to do |format|
-      format.html { render :show }
-      format.json { render json: @dinner }
-    end
   end
 
   def create
@@ -27,11 +17,9 @@ class DinnersController < ApplicationController
 
     respond_to do |format|
       if @dinner.save
-        format.html { redirect_to @dinner, notice: 'Dinner was successfully created.' }
-        format.json { render :show, status: :created, location: @dinner}
+        redirect_to dinner_path(@dinner), notice: 'Dinner was successfully created.' 
       else
-        format.html { render :new }
-        format.json { render json: @dinner.errors, status: :unprocessable_entity }
+        render :new
       end
     end
   end

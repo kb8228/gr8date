@@ -44,6 +44,10 @@ Rails.application.routes.draw do
   delete "events/:id" => "events#destroy"
 
   # Dinner routes:
+  namespace :api do
+    resources :dinners, only: [:index, :show]
+  end
+
   get "dinners" => "dinners#index"
   get "dinners/new" => "dinners#new", as: :new_dinner
   post "dinners" => "dinners#create"

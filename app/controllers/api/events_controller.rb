@@ -7,7 +7,7 @@ module API
     end
 
     def show
-      renser json: Event.find(params[:id])
+      render json: Event.find(params[:id])
     end
 
     # def new
