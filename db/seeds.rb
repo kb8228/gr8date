@@ -8,28 +8,28 @@ users = User.create([
    password: "password",
    password_confirmation: "password"
   },
-  {name: "Nick",
-   email: "nick@example.com",
+  {name: "Zack",
+   email: "zack@example.com",
    password: "password",
    password_confirmation: "password"
   },
-  {name: "Nick",
-   email: "nick@example.com",
+  {name: "Ksenia",
+   email: "ksenia@example.com",
    password: "password",
    password_confirmation: "password"
   },
-  {name: "Nick",
-   email: "nick@example.com",
+  {name: "Shawn",
+   email: "shawn@example.com",
    password: "password",
    password_confirmation: "password"
   },
-  {name: "Nick",
-   email: "nick@example.com",
+  {name: "Glenn",
+   email: "glenn@example.com",
    password: "password",
    password_confirmation: "password"
   },
-  {name: "Nick",
-   email: "nick@example.com",
+  {name: "Jimmy",
+   email: "jimmy@example.com",
    password: "password",
    password_confirmation: "password"
   }

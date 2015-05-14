@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  has_and_belongs_to_many :plans
+  has_many :plans
 
   validates :event_name, presence: true
   validates :event_date, presence: true
