@@ -2,66 +2,51 @@ User.destroy_all #clears out database of all data / cleans slate
 #array of Users
 users = User.create([
 
-  
 
-  {
-    id: 1,
+  {id: 1,
    name: "Nick",
    email: "nick@example.com",
    password: "password",
-   password_confirmation: "password",
+   password_confirmation: "password"
   },
 
-  
-
-  {
-    id: 2,
+  {id: 2,
    name: "Zack",
    email: "zack@example.com",
    password: "password",
    password_confirmation: "password"
   },
 
-  
-
-  {
-    id: 3,
+  {id: 3,
    name: "Ksenia",
    email: "ksenia@example.com",
    password: "password",
    password_confirmation: "password"
   },
 
-  
-
-  {
-    id: 4,
+  {id: 4,
    name: "Shawn",
    email: "shawn@example.com",
    password: "password",
    password_confirmation: "password"
   },
 
-  
-
-  {
-    id: 5,
+  {id: 5,
    name: "Glenn",
    email: "glenn@example.com",
    password: "password",
    password_confirmation: "password"
   },
 
-  
-
-  {
-    id: 6,
+ 
+  {id: 6,
    name: "Jimmy",
    email: "jimmy@example.com",
    password: "password",
    password_confirmation: "password"
   }
 ])
+
 
 #RESTAURANT SEEDS:
 
@@ -269,7 +254,7 @@ dinners = Dinner.create([
     name: "Umami Burger",
     address: "500 Broadway Santa Monica, CA 90401",
     hours: "mon: 11:00am - 10:00pm,
-        tue: 11:00am - 10:00pm,
+        tue: 11:00am - 10:00pm, 
         wed: 11:00am - 10:00pm,
         thu: 11:00am - 11:00pm,
         fri: 11:00am - 11:00pm,

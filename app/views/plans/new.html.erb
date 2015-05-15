@@ -25,7 +25,10 @@
         Select a cuisine:
       </label>
       <%= f.select(:dinner, options_for_select(Dinner.cuisines)) %>
-   
+
+      <select class="input_medium" id="sel1">
+        <%= options_for_select Event.categories %>
+      </select>
     </div>
 
     <div class="form-group">
@@ -34,18 +37,5 @@
 
   <% end %>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

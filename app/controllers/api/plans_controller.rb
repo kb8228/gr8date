@@ -10,9 +10,9 @@ module API
 
     def update
       plan = Plan.find(params[:id])
-
+      #event = Event.find(params[:event_id])
       if plan.update(plan_params)
-        render status: 204
+        render json: Plan.find(plan.id), status: 202
       else
         render json: plan.errors, status:  422
       end
@@ -20,7 +20,7 @@ module API
 
     private
     def plan_params
-        params.require(:plan).permit(:user_id, :date, :location)
+        params.require(:plan).permit(:user_id, :date, :location, :category, :cuisine, :event_id)
     end
   end
 end
