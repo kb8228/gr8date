@@ -9,7 +9,6 @@ class PlansController < ApplicationController
 
     def show
         @plan = Plan.find(params[:id])
-      @plan = Plan.new
     end
 
     def create
@@ -28,10 +27,6 @@ class PlansController < ApplicationController
       end
     end
 
-    def show
-        @plan = Plan.find(params[:id])
-    end
-
     def edit
         @plan = Plan.find(params[:id])
     end
@@ -44,7 +39,7 @@ class PlansController < ApplicationController
 
     private
     def plan_params
-        params.require(:plan).permit(:user_id, :date, :time, :location)
+        params.require(:plan).permit(:user_id, :date, :category, :location)
     end
 
 end

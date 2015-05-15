@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root "plans#new"
-  # User routes
-
+  
   # User routes:
   get "users" => "users#index"
   get "users/new" => "users#new", as: :new_user
