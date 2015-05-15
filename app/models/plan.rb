@@ -1,7 +1,7 @@
 class Plan < ActiveRecord::Base
   belongs_to :user
-  has_one :event
-  has_one :dinner
+  belongs_to :event
+  belongs_to :dinner
 
   validates :date, presence: true
   validates :time, presence: true

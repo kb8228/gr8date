@@ -1,4 +1,8 @@
 // Place all the behaviors and hooks related to the matching controller here.
+
+//patch request:  "/api/plan/" + plan.id + "?event_id=" + event.id
+// "api/plan/2?event_id=3"
+
 $(document).ready(function(){
   var API_BASE = "/api/events/";
 
@@ -13,6 +17,7 @@ $(document).ready(function(){
   json.done(function(data){
     var i;
     for(i=0; i<6; i++){
+      console.log(data[i].id);
       addEvent( $('#event-list'), data[i] );
     }
   });
@@ -37,7 +42,7 @@ $(document).ready(function(){
     var listItem = "<div class='item-box'" + eventId + ">";
     listItem += "<h3>" + eventName + "</h3></div>"; //finish this div
 
-    jqElem.append("<li id='event" + eventId + "'>" + listItem + "</li>");   
+    jqElem.append("<li class='event-click' id='" + eventId + "'>" + listItem + "</li>");   
   }; // AddEvent END
 
   $("#event-list").on('click', 'li', function(){
