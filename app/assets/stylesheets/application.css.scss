@@ -17,10 +17,25 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+html{
+  background: url('background.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar-default {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: #e7e7e7;
+}
 
 body{
   font-family: 'Dosis', sans-serif;
   vertical-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 20px;
+  color: white;
 }
 
 #logintext{
@@ -52,12 +67,18 @@ h3{
     padding-top: 75px;
     width: 80%;
     margin: 0 auto;
+
 }
 
 .row {
   margin-left: 0px;
   margin-right: 0px;
+  background-color: none;
+  background-color: rgba(0, 0, 0, 0);
 }
+
+
+
 .detailrow {
   margin: 0 auto;
   margin-top: 75px;
@@ -65,7 +86,7 @@ h3{
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0);
   text-align: center;
 }
 
@@ -73,15 +94,7 @@ h3{
   margin: 0 auto;
 }
 
-.row {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333333;
-  background-color: #fff;
-  text-align: center;
 
-}
 
 
 .btn{
@@ -128,6 +141,11 @@ img{
     width: 100%;
     height: auto;
     padding: 2px;
+    color:white;
+}
+
+h2{
+  color:white;
 }
 
 h2{
@@ -151,24 +169,16 @@ div.vertical-line{
   float: right;
 }
 
-#deets{
-  margin-top: 100px;
+
+.thumbnail{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.thumbnail .caption {
+  padding: 9px;
+  color: #FFF;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-=======
-    padding:0px;
->>>>>>> 1d1caec19bb63b4a3fab4b13ff9db59a342b4983
