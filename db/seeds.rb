@@ -2,59 +2,37 @@ User.destroy_all #clears out database of all data / cleans slate
 #array of Users
 users = User.create([
 
-  
-
-  {
+  {id: 1,
    name: "Nick",
    email: "nick@example.com",
    password: "password",
    password_confirmation: "password",
   },
-
-  {
-
-  {
-
+  {id: 2,
    name: "Zack",
    email: "zack@example.com",
    password: "password",
    password_confirmation: "password"
   },
-
-  {
-=======
-  {
-
+  {id: 3,
    name: "Ksenia",
    email: "ksenia@example.com",
    password: "password",
    password_confirmation: "password"
   },
-
-  {
-
-  {
-
+  {id: 4,
    name: "Shawn",
    email: "shawn@example.com",
    password: "password",
    password_confirmation: "password"
   },
-
-  {
-
-  {
-
+  {id: 5,
    name: "Glenn",
    email: "glenn@example.com",
    password: "password",
    password_confirmation: "password"
   },
-
-  {
-
-  {
-
+  {id: 6,
    name: "Jimmy",
    email: "jimmy@example.com",
    password: "password",

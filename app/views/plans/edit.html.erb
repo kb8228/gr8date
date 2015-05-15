@@ -3,7 +3,16 @@
 <!-- # show plan date and location
 # make section with id to reference in jQ script for events (based on plan.event_type)
 # make section with id to reference in jQ script for events (based on plan.dinner_type) -->
+<section>
+  <h3><%= @plan.date %> | <%= @plan.location %></h3>
+</section>
 
 <section id="event-section">
+  <h3>Pick your <%= @plan.category %> event:</h3>
   <ul id="event-list"></ul>
+</section>
+
+<section id="dinner-section">
+  <h3>Pick your <%#= @plan.cuisine %> restaurant:</h3>
+  <ul id="dinner-list"></ul>
 </section>
