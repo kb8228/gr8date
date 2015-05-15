@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "landingpage#index"
+  root "plans#new"
   # User routes
 
   # User routes:
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   post "plans/" => "plans#create"
 
   delete "plans/" => "plans#destroy"
-  get "plans/new" => "plans#new", as: :new_plan
+
   post "plans/:id/edit" => "plans#edit", as: :edit_plan
   get "plans/:id" => "plans#show", as: :plan
 

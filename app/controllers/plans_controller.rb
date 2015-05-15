@@ -12,7 +12,6 @@ class PlansController < ApplicationController
 
     def show
         @plan = Plan.find(params[:id])
-      @plan = Plan.new
     end
 
     def create
@@ -27,9 +26,6 @@ class PlansController < ApplicationController
       
     end
 
-    def show
-        @plan = Plan.find(params[:id])
-    end
 
     # def edit
     #     @plan = Plan.find(params[:id])
