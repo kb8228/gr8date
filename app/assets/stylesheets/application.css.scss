@@ -38,10 +38,27 @@ body{
   color: white;
 }
 
-#logintext{
-    padding-top: 10px;
-    font-size: 40px;
+h1{
+    padding-top: 65px;
     text-transform: uppercase;
+    text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+h3{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+hr{
+    padding: 0px;
+}
+
+img{
+    padding:0px;
 }
 
 .container{
@@ -51,18 +68,6 @@ body{
     background-color: none;
 }
 
-
-h1{
-    padding-top: 65px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-h3{
-    text-transform: uppercase;
-    text-align: center;
-}
-
 .containerboxers{
     padding-top: 75px;
     width: 80%;
@@ -70,6 +75,7 @@ h3{
 
 }
 
+<<<<<<< HEAD
 .row {
   margin-left: 0px;
   margin-right: 0px;
@@ -79,6 +85,8 @@ h3{
 
 
 
+=======
+>>>>>>> eb774f7d9629c354ca7ffb4ae46fe4c2b12a9eeb
 .detailrow {
   margin: 0 auto;
   margin-top: 75px;
@@ -90,25 +98,47 @@ h3{
   text-align: center;
 }
 
+<<<<<<< HEAD
 #detailsbox{
   margin: 0 auto;
 }
 
 
+=======
+.row {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #fff;
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
 
+}
+
+#event-section{
+  text-align: center;
+}
+#event-list{
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px;
+  list-style-type: none;
+}
+#event-list li{
+  width: 30%;
+  display: inline-block;
+}
+>>>>>>> eb774f7d9629c354ca7ffb4ae46fe4c2b12a9eeb
+
+.thumbnail{
+}
 
 .btn{
     text-transform: uppercase;
     padding-bottom: 10px;
     width: 90%;
-}
-
-hr{
-    padding: 0px;
-}
-
-img{
-    padding:0px;
 }
 
 .form-group{
@@ -117,16 +147,14 @@ img{
   margin-bottom: 15px;
 }
 
+
+img{
+    padding:0px;
+    }
+
 .signupbox{
   margin: 0 auto;
 }
-
-
-.btn {
-  text-transform: uppercase;
-  width: 100%;
-}
-
 
 
 .col-md-6{
@@ -134,7 +162,6 @@ img{
   margin-top: 50px;
   width: 50%; 
   top:50%; 
-
 }
 
 .col-md-6 img {
@@ -146,13 +173,6 @@ img{
 
 h2{
   color:white;
-}
-
-h2{
-  text-align: center;
-}
-#rule{
-  border-right: 1pt solid #ddd;
 }
 
 .big_blue_button{
@@ -169,6 +189,7 @@ div.vertical-line{
   float: right;
 }
 
+<<<<<<< HEAD
 
 .thumbnail{
   background-color: rgba(0, 0, 0, 0);
@@ -181,4 +202,23 @@ div.vertical-line{
 
 
 
+=======
+#deets{
+  margin-top: 100px;
+}
+
+#logintext{
+    padding-top: 10px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#detailsbox{
+  margin: 0 auto;
+}
+
+#rule{
+  border-right: 1pt solid #ddd;
+}
+>>>>>>> eb774f7d9629c354ca7ffb4ae46fe4c2b12a9eeb
 

@@ -4,32 +4,37 @@ class PlansController < ApplicationController
     end
 
     def new
-        @plan = Plan.new
+      @plan = current_user.plans.new
     end
 
     def show
-        @plan = Plan.find(params[:id])
+      @plan = Plan.find(params[:id])
     end
 
     def create
       @user = current_user
-      @plan = @user.plans.create(plan_params)
-      logger.debug @user.inspect + "\n"
-
-      respond_to do |format|
-        if @plan.save
-          format.html { redirect_to @plan, notice: 'Date is planned!' }
-          format.json { render :show, status: :created }
-        else
-          format.html { render :new }
-          format.json { render json: @plan.errors, status: :unprocessable_entity }
-        end
+      @plan = @user.plans.new(plan_params)
+      
+      if @plan.save
+        redirect_to edit_plan_path(@plan), notice: 'Date is planned!'
+      else
+        render :new
       end
     end
 
-
     def edit
         @plan = Plan.find(params[:id])
+    end
+
+    def update
+      @plan = Plan.find(params[:id])
+
+      if @plan.update(plan_params)
+        flash[:message] = "Your plan was updated!"
+        redirect_to plan_path(@plan)
+      else
+        render :edit
+      end
     end
 
     def destroy
@@ -40,7 +45,7 @@ class PlansController < ApplicationController
 
     private
     def plan_params
-        params.require(:plan).permit(:user_id, :date, :time, :location)
+      params.require(:plan).permit(:user_id, :date, :category, :location)
     end
 
 end

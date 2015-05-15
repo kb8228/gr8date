@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150513024045) do
+ActiveRecord::Schema.define(version: 20150515022604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,8 +53,11 @@ ActiveRecord::Schema.define(version: 20150513024045) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.integer  "event_id"
+    t.integer  "dinner_id"
+    t.string   "category"
   end
 
+  add_index "plans", ["dinner_id"], name: "index_plans_on_dinner_id", using: :btree
   add_index "plans", ["user_id"], name: "index_plans_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
@@ -67,5 +70,6 @@ ActiveRecord::Schema.define(version: 20150513024045) do
   end
 
   add_foreign_key "events", "plans"
+  add_foreign_key "plans", "dinners"
   add_foreign_key "plans", "users"
 end
