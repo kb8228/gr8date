@@ -2,7 +2,6 @@ User.destroy_all #clears out database of all data / cleans slate
 #array of Users
 users = User.create([
 
-  
 
   {id: 1,
    name: "Nick",
@@ -39,8 +38,9 @@ users = User.create([
    password_confirmation: "password"
   },
 
+ 
   {id: 6,
-    name: "Jimmy",
+   name: "Jimmy",
    email: "jimmy@example.com",
    password: "password",
    password_confirmation: "password"
