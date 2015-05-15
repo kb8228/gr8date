@@ -13,16 +13,12 @@ class PlansController < ApplicationController
 
     def create
       @user = current_user
-      @plan = current_user.plans.new(plan_params)
-
-      respond_to do |format|
-        if @plan.save
-          format.html { redirect_to @plan, notice: 'Date is planned!' }
-          format.json { render :show, status: :created }
-        else
-          format.html { render :new }
-          format.json { render json: @plan.errors, status: :unprocessable_entity }
-        end
+      @plan = @user.plans.new(plan_params)
+      
+      if @plan.save
+        redirect_to edit_plan_path(@plan), notice: 'Date is planned!'
+      else
+        render :new
       end
     end
 

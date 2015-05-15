@@ -19,6 +19,9 @@ Rails.application.routes.draw do
 
 
   # Plan Routes
+  namespace :api do
+    resources :plans, only: [:index, :show, :edit, :update]
+  end
   get "plans/" => "plans#index"
   get "plans/new" => "plans#new", as: :new_plan
   post "plans/" => "plans#create"
@@ -27,7 +30,6 @@ Rails.application.routes.draw do
   get "plans/:id/edit" => "plans#edit", as: :edit_plan
   put "plans/:id" => "plans#update"
   patch "plans/:id" => "plans#update"
-
   delete "plans/:id" => "plans#destroy"
 
   # Events routes:
