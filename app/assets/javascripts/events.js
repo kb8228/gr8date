@@ -39,7 +39,7 @@ $(document).ready(function(){
     var eventCategory = data.category;
     var venueUrl = data.venue_url;
 
-    var listItem = "<div class='item-box'" + eventId + ">";
+    var listItem = "<div class='item-box'>";
     listItem += "<h3>" + eventName + "</h3></div>"; //finish this div
 
     jqElem.append("<li class='event-click' id='" + eventId + "'>" + listItem + "</li>");   
