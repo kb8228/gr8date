@@ -1,72 +1,11 @@
-<h1>Plan a new date</h1>
-
-<%= form_for @plan do |f| %>
-
-<div class signupbox>
-  <div class="form-group">
-    <%= f.label :date %>
-    <%= f.date_field :date, class: "form-control" %>
-  </div>
-
-
-   <div>
-
-  <div class="form-group">
-    <%= f.label :time %>
-    <%= f.time_field :time, class: "form-control" %>
-  </div>
-
-   <div class="form-group">
-
-    <%= f.label :location %>
-    <%= f.text_field :location, class: "form-control"  %>
-  </div>
-
-
-<label for="sel1">Select an event type:</label><br>
-  <select class="input_medium" id="sel1">
-   <%= options_for_select Event.categories %>
-  </select>
-
-<div>
-
-<br>
-
-  <%= f.submit "Plan my date" %> 
-
-
-  <div class="form-group">
-  <%= f.submit "Plan my date", class: "btn btn-primary"  %>
-  </div> 
-
-
-
-
-
-<% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-<div class="signupbox">
+ <div class="signupbox">
   <h1>Plan a new date</h1>
 
   <%= form_for @plan do |f| %>
 
     <div class="form-group">
       <%= f.label :date %>
-      <%= f.date_field :date, class: "form-control" %>
+      <%= f.date_field :date, class: "form-control" %>  
     </div>
 
     <div class="form-group">
@@ -74,30 +13,23 @@
       <%= f.text_field :location, class: "form-control"  %>
     </div>
 
+
     <div class="form-group">
       <label for="sel1">
         Select an event type:
       </label>
-      <%= f.select(:event, options_for_select(Event.categories)) %>
+      <%= f.select(:event, options_for_select(Event.categories), {}, {:class => "form-control"}) %> 
     </div>
-
+    
     <div class="form-group">
       <label for="sel1">
         Select a cuisine:
       </label>
-      <%= f.select(:dinner, options_for_select(Dinner.cuisines)) %>
+      <%= f.select(:dinner, options_for_select(Dinner.cuisines), {}, {:class => "form-control"}) %><br><br>
 
-      <select class="input_medium" id="sel1">
-        <%= options_for_select Event.categories %>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <%= f.submit "Plan my date!", class: "btn btn-primary"  %>
+    <div class="form-group" id="planbtn">
+      <%= f.submit "Plan my date", class: "btn btn-primary"  %>
     </div> 
 
   <% end %>
 </div>
->>>>>>> 57114cfe83d4d3fed21db8e31d5ca7c89bf0878e
-
-
