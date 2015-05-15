@@ -4,7 +4,6 @@ class Plan < ActiveRecord::Base
   belongs_to :dinner
 
   validates :date, presence: true
-  validates :time, presence: true
   validates :location, presence: true
   validates :user_id, presence: true
 

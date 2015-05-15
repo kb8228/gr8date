@@ -8,15 +8,31 @@
     <%= f.date_field :date, class: "form-control" %>
   </div>
 
+
+   <div>
+
   <div class="form-group">
     <%= f.label :time %>
     <%= f.time_field :time, class: "form-control" %>
   </div>
 
    <div class="form-group">
+
     <%= f.label :location %>
     <%= f.text_field :location, class: "form-control"  %>
   </div>
+
+
+<label for="sel1">Select an event type:</label><br>
+  <select class="input_medium" id="sel1">
+   <%= options_for_select Event.categories %>
+  </select>
+
+<div>
+
+<br>
+
+  <%= f.submit "Plan my date!" %> 
 
 
   <div class="form-group">
@@ -26,4 +42,21 @@
 
 
 
+
 <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

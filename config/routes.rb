@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+
+  root "plans#new"
+  
+
   #root "plans#new"
   # User routes
+
 
   # User routes:
   get "users" => "users#index"

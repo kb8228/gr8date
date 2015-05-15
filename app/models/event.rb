@@ -9,4 +9,9 @@ class Event < ActiveRecord::Base
   validates :phone, presence: true
   validates :category, presence: true
   validates :venue_url, presence: true
+
+  def self.categories
+    Event.all.map(&:category).uniq
+  end
+
 end

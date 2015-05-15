@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20150515022604) do
     t.datetime "updated_at",                          null: false
     t.integer  "event_id"
     t.integer  "dinner_id"
+    t.string   "category"
   end
 
   add_index "plans", ["dinner_id"], name: "index_plans_on_dinner_id", using: :btree

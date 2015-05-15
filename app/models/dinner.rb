@@ -1,5 +1,6 @@
 class Dinner < ActiveRecord::Base
   has_many :plans
+
   
   validates :name, presence: true
   validates :address, presence: true
@@ -8,4 +9,5 @@ class Dinner < ActiveRecord::Base
   validates :alcohol, presence: true
   validates :hours, presence: true
   validates :image_url, presence: true
+
 end
