@@ -82,6 +82,21 @@ img{
 
 }
 
+#event-section{
+  text-align: center;
+}
+#event-list{
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px;
+  list-style-type: none;
+}
+#event-list li{
+  width: 30%;
+  display: inline-block;
+}
+
+.thumbnail{
 
 .btn{
     text-transform: uppercase;

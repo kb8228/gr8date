@@ -4,7 +4,7 @@ class PlansController < ApplicationController
     end
 
     def new
-        @plan = Plan.new
+      @plan = current_user.plans.new
     end
 
     def show
@@ -13,7 +13,7 @@ class PlansController < ApplicationController
 
     def create
       @user = current_user
-      @plan = @user.plans.create(plan_params)
+      @plan = current_user.plans.new(plan_params)
 
       respond_to do |format|
         if @plan.save
