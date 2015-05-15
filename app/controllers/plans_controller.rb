@@ -4,17 +4,16 @@ class PlansController < ApplicationController
     end
 
     def new
-        @plan = Plan.new
+      @plan = current_user.plans.new
     end
 
     def show
-        @plan = Plan.find(params[:id])
+      @plan = Plan.find(params[:id])
     end
 
     def create
       @user = current_user
-      @plan = @user.plans.create(plan_params)
-      logger.debug @user.inspect + "\n"
+      @plan = current_user.plans.new(plan_params)
 
       respond_to do |format|
         if @plan.save
@@ -29,6 +28,17 @@ class PlansController < ApplicationController
 
     def edit
         @plan = Plan.find(params[:id])
+    end
+
+    def update
+      @plan = Plan.find(params[:id])
+
+      if @plan.update(plan_params)
+        flash[:message] = "Your plan was updated!"
+        redirect_to plan_path(@plan)
+      else
+        render :edit
+      end
     end
 
     def destroy

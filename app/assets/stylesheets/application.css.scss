@@ -20,25 +20,17 @@
 
 body{
   font-family: 'Dosis', sans-serif;
+  vertical-align: center;
 }
-
-#logintext{
-    padding-top: 10px;
-    font-size: 40px;
-    text-transform: uppercase;
-}
-
-.container{
-    padding-top: 10px;
-    font-size: 25px;
-    text-transform: uppercase;
-}
-
 
 h1{
-    padding-top: 30px;
+    padding-top: 65px;
     text-transform: uppercase;
     text-align: center;
+}
+
+h2{
+  text-align: center;
 }
 
 h3{
@@ -46,8 +38,19 @@ h3{
     text-align: center;
 }
 
-input{
-   text-transform: uppercase; 
+hr{
+    padding: 0px;
+}
+
+img{
+    padding:0px;
+}
+
+.container{
+    padding-top: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+    background-color: none;
 }
 
 .containerboxers{
@@ -56,9 +59,15 @@ input{
     margin: 0 auto;
 }
 
-.row {
-  margin-left: 0px;
-  margin-right: 0px;
+.detailrow {
+  margin: 0 auto;
+  margin-top: 75px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #fff;
+  text-align: center;
 }
 
 .row {
@@ -68,11 +77,26 @@ input{
   color: #333333;
   background-color: #fff;
   text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
 
+}
+
+#event-section{
+  text-align: center;
+}
+#event-list{
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px;
+  list-style-type: none;
+}
+#event-list li{
+  width: 30%;
+  display: inline-block;
 }
 
 .thumbnail{
-}
 
 .btn{
     text-transform: uppercase;
@@ -80,10 +104,65 @@ input{
     width: 90%;
 }
 
-hr{
-    padding: 0px;
+.form-group{
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 15px;
 }
+
 
 img{
     padding:0px;
     }
+
+.signupbox{
+  margin: 0 auto;
+}
+
+
+.col-md-6{
+  text-align: center;
+  margin-top: 50px;
+  width: 50%; 
+  top:50%; 
+
+}
+
+.col-md-6 img {
+    width: 100%;
+    height: auto;
+    padding: 2px;
+}
+
+.big_blue_button{
+  width: 45%;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+div.vertical-line{
+  width: 1px;
+  color: black;
+  height: 80%;
+  float: right;
+}
+
+#deets{
+  margin-top: 100px;
+}
+
+#logintext{
+    padding-top: 10px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#detailsbox{
+  margin: 0 auto;
+}
+
+#rule{
+  border-right: 1pt solid #ddd;
+}
+

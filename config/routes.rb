@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+
   root "plans#new"
   
+
+  #root "plans#new"
+  # User routes
+
+
   # User routes:
   get "users" => "users#index"
   get "users/new" => "users#new", as: :new_user
@@ -21,14 +27,19 @@ Rails.application.routes.draw do
   get "plans/" => "plans#index"
   get "plans/new" => "plans#new", as: :new_plan
   post "plans/" => "plans#create"
+
   get "plans/:id" => "plans#show", as: :plan
-  post "plans/:id/edit" => "plans#edit", as: :edit_plan
+  get "plans/:id/edit" => "plans#edit", as: :edit_plan
   put "plans/:id" => "plans#update"
   patch "plans/:id" => "plans#update"
 
   delete "plans/:id" => "plans#destroy"
 
   # Events routes:
+  namespace :api do
+    resources :events, only: [:index, :show]
+  end
+
   get "events" => "events#index"
   get "events/new" => "events#new", as: :new_event
   post "events" => "events#create"
@@ -39,6 +50,10 @@ Rails.application.routes.draw do
   delete "events/:id" => "events#destroy"
 
   # Dinner routes:
+  namespace :api do
+    resources :dinners, only: [:index, :show]
+  end
+
   get "dinners" => "dinners#index"
   get "dinners/new" => "dinners#new", as: :new_dinner
   post "dinners" => "dinners#create"
@@ -47,6 +62,5 @@ Rails.application.routes.draw do
   put "dinners/:id" => "dinners#update"
   patch "dinners/:id" => "dinners#update"
   delete "dinners/:id" => "dinners#destroy"
-
 
 end
