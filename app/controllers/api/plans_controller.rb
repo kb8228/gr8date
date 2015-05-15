@@ -1,8 +1,8 @@
 module API 
   class PlansController < ApplicationController
-    # def index
-    #   render json: Plan.all
-    # end
+    def index
+      render json: Plan.all
+    end
 
     def show
       render json: Plan.find(params[:id])

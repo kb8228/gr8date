@@ -18,7 +18,7 @@
 @import 'bootstrap';
 
 html{
-  background: url('background.png') no-repeat center center fixed; 
+  background: url(<%= asset_path 'background.png'%>) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -69,7 +69,7 @@ img{
 }
 
 .containerboxers{
-    padding-top: 75px;
+    padding-top: 125px;
     width: 80%;
     margin: 0 auto;
 
@@ -128,12 +128,6 @@ img{
 .thumbnail{
 }
 
-.btn{
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    width: 90%;
-}
-
 .form-group{
   width: 30%;
   margin: 0 auto;
@@ -171,7 +165,7 @@ h2{
 .big_blue_button{
   width: 45%;
   margin: 0 auto;
-  padding-top: 15px;
+  padding-top: 10px;
   padding-bottom: 15px;
 }
 
@@ -207,5 +201,25 @@ div.vertical-line{
 
 #rule{
   border-right: 1pt solid #ddd;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+#deets{
+  margin-top: 25px;
+}
+
+.btn{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.splitbox{
+  margin-top: -10px;
+  margin-bottom: 50px;
 }
 

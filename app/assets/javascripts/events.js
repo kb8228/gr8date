@@ -8,20 +8,20 @@ $(document).ready(function(){
   //console.log(pathname);
               // var planEventCategory;
 
-              // // finding Plan's event category
-  var planCategory = $.ajax({
-    datatype: 'json',
-    type: 'GET',
-    url: '/api' + pathname,
-    data: {}
-  })
+  //             // // finding Plan's event category
+  // var planCategory = $.ajax({
+  //   datatype: 'json',
+  //   type: 'GET',
+  //   url: '/api' + pathname,
+  //   data: {}
+  // })
 
-  planCategory.done(function(data){
-    console.log(data);
-  });
-  planCategory.fail(function(data){
-    $('event-section').html("<h2>Events failed to load.</h2>");
-  });
+  // planCategory.done(function(data){
+  //   console.log(data);
+  // });
+  // planCategory.fail(function(data){
+  //   $('event-section').html("<h2>Events failed to load.</h2>");
+  // });
 
   //this is our events' index in json
   var json = $.ajax({
