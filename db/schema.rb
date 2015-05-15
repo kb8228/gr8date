@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 20150515022604) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.integer  "event_id"
-    t.integer  "dinner_id"
     t.string   "category"
+    t.integer  "dinner_id"
   end
 
   add_index "plans", ["dinner_id"], name: "index_plans_on_dinner_id", using: :btree

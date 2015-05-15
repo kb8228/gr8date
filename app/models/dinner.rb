@@ -10,4 +10,8 @@ class Dinner < ActiveRecord::Base
   validates :hours, presence: true
   validates :image_url, presence: true
 
+  def self.cuisines
+    Dinner.all.map(&:cuisine).uniq
+  end
+
 end
