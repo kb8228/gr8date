@@ -6,7 +6,7 @@ users = User.create([
    name: "Nick",
    email: "nick@example.com",
    password: "password",
-   password_confirmation: "password",
+   password_confirmation: "password"
   },
   {id: 2,
    name: "Zack",
@@ -39,6 +39,7 @@ users = User.create([
    password_confirmation: "password"
   }
 ])
+
 
 #RESTAURANT SEEDS:
 
@@ -246,7 +247,7 @@ dinners = Dinner.create([
     name: "Umami Burger",
     address: "500 Broadway Santa Monica, CA 90401",
     hours: "mon: 11:00am - 10:00pm,
-        tue: 11:00am - 10:00pm,
+        tue: 11:00am - 10:00pm, 
         wed: 11:00am - 10:00pm,
         thu: 11:00am - 11:00pm,
         fri: 11:00am - 11:00pm,
