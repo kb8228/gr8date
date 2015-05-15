@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :plans, only: [:index, :show, :edit, :update]
   end
+  
   get "plans/" => "plans#index"
   get "plans/new" => "plans#new", as: :new_plan
   post "plans/" => "plans#create"
