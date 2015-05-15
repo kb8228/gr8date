@@ -8,6 +8,7 @@ FactoryGirl.define do
     phone "MyString"
     category "MyString"
     venue_url "MyString"
+    image_url "MyString"
   end
 
 end

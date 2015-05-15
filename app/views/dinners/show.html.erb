@@ -13,12 +13,14 @@
             </div>
 
             <div class="col-md-6" id="deets">
-                <%= @dinner.name %><br>
-                <%= @dinner.address %><br>
-                <%= @dinner.hours %><br>  hstore
-                <%= @dinner.phone_number %><br>
-                <%= @dinner.alcohol %><br>
-                <%= @dinner.cuisine %>
+                <%= @dinner.name %><br><br>
+                <%= @dinner.address %><br><br>
+                <% @dinner.hours.split(",").each do |time| %>
+                <%= time %><br>
+                <% end %>
+                <br><%= @dinner.phone_number %>
+                <p>Alcohol: <%= @dinner.alcohol %></p>
+                <p>Cuisine: <%= @dinner.cuisine %></p>
             </div>
             </div>
 

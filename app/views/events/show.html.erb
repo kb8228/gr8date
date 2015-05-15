@@ -1,4 +1,5 @@
 <div class="containerboxers">
+
   <div class="thumbnail">
       <div class="caption">
         <h2>Dinner Details</h2>
@@ -7,24 +8,19 @@
         <div class="row">
             <div class="col-md-6" id="rule">
             <div class="detailimage">
-                <img src="http://s3.amazonaws.com/pa-spaces.production/attachments/1127/1_Locked_and_Loaded_2011_02_27_performance_004.slide.jpg?1365472713" width="100%">
+                <img src= <%= @event.image_url %> image_urlwidth="100%">
             </div>
             </div>
 
-            <div class="col-md-6"><div class="deets">
-                <br>The Misfit Restaurant + Bar
-                <br>225 Santa Monica Blvd. Santa Monica, CA 90401
-                <br>"mon: 12:00pm - 12:00am
-                <br>tue: 12:00pm - 12:00am 
-                <br>wed: 12:00pm - 12:00am 
-                <br>thu: 12:00pm - 1:00am  
-                <br>fri: 12:00pm - 1:00am
-                <br>sat: 11:00am - 1:00am  
-                <br>sun: 10:30am - 11:00pm
-                <br>(310) 656-9800
-                <br>alcohol:Yes
-                <br>cuisine: Americana
-                </div>
+            <div class="col-md-6" id="deets">
+                <%= @event.event_name %><br>
+                <%= @event.event_date %><br>
+                <%= @event.event_time %><br>
+                <%= @event.venue_name %><br>
+                <%= @event.address %><br>
+                <%= @event.phone %><br>
+                <%= @event.category %><br>
+                <a href= <%= @event.venue_url %> ><%= @event.venue_url %></a><br>
             </div>
             </div>
 
