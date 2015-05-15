@@ -36,6 +36,7 @@ $(document).ready(function(){
     var venuePhone = data.phone;
     var eventCategory = data.category;
     var venueUrl = data.venue_url;
+    var eventImg = data.image_url;
 
     var listItem = "<div class='item-box'>";
     listItem += "<h3>" + eventName + "</h3></div>"; //finish this div
@@ -46,7 +47,7 @@ $(document).ready(function(){
     $("#event-list").on('click', 'li', function(){
       var id = $(this).attr('id');
       var url = "/api" + pathname + "?event_id=" + id;
-      console.log(url);
+      //console.log(url);
       $.ajax({
         datatype: 'json',
         type: 'PATCH',
@@ -59,5 +60,5 @@ $(document).ready(function(){
           console.log(err);
         }
       })
-  });
+    });
 }); //doc ready ends

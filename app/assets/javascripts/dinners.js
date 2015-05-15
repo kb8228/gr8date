@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
   var API_BASE = "/api/dinners/";
+  var pathname = window.location.pathname;
+  pathname = pathname.replace('/edit', '');
 
   var json = $.ajax({
     datatype: 'json',
@@ -43,7 +45,20 @@ $(document).ready(function(){
 
   $("#dinner-list").on('click', 'li', function(){
     var id = $(this).attr('id');
-    //console.log(id);
+    var url = "/api" + pathname + "?dinner_id=" + id;
+    //console.log(url);
+    $.ajax({
+      datatype: 'json',
+      type: 'PATCH',
+      url: url,
+      data: {plan: {dinner_id: id}},
+      success: function(receivedData){
+        console.log(receivedData);
+      },
+      error: function(err){
+        console.log(err);
+      }
+    })
   });
 
 });

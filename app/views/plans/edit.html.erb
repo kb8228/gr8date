@@ -16,3 +16,7 @@
   <h3>Pick your <%#= @plan.cuisine %> restaurant:</h3>
   <ul id="dinner-list"></ul>
 </section>
+
+<div class="form-group">
+  <%= link_to "Done", plan_path(@plan), class: "btn btn-primary" %>
+</div>
