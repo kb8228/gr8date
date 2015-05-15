@@ -13,8 +13,17 @@
     <%= f.time_field :time, class: "form-control" %>
   </div>
 
+   <div class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location, class: "form-control"  %>
+  </div>
+
+
   <div class="form-group">
   <%= f.submit "Plan my date!", class: "btn btn-primary"  %>
   </div> 
+
+
+
 
 <% end %>

@@ -7,6 +7,7 @@ User.destroy_all #clears out database of all data / cleans slate
 
 
 
+
 users = User.create([
   {id: 1,
     name: "Nick",
@@ -41,10 +42,8 @@ users = User.create([
   {id: 6,
     name: "Jimmy",
    email: "jimmy@example.com",
-   password: "password",
-   password_confirmation: "password"
-  }
-])
+
+
 
 #RESTAURANT SEEDS:
 

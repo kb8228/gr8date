@@ -7,29 +7,30 @@ class PlansController < ApplicationController
         @plan = Plan.new
     end
 
-    def create
-    end
-
     def show
         @plan = Plan.find(params[:id])
     end
 
     def create
       @user = current_user
-      @plan = @user.plans.new(plan_params)
+      @plan = @user.plans.create(plan_params)
+      logger.debug @user.inspect + "\n"
 
-      if @plan.save
-        redirect_to plan_path(@plan)
-      else
-        render :new
+      respond_to do |format|
+        if @plan.save
+          format.html { redirect_to @plan, notice: 'Date is planned!' }
+          format.json { render :show, status: :created }
+        else
+          format.html { render :new }
+          format.json { render json: @plan.errors, status: :unprocessable_entity }
+        end
       end
-      
     end
 
 
-    # def edit
-    #     @plan = Plan.find(params[:id])
-    # end
+    def edit
+        @plan = Plan.find(params[:id])
+    end
 
     def destroy
         @plan = Plan.find(params[:id])
