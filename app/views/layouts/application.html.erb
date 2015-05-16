@@ -12,13 +12,14 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <div>
-      <% if logged_in? %>
-      <p>Hi, <%= current_user.name %> &nbsp; | &nbsp;<%= link_to 'My Page', user_path(current_user) %> &nbsp;| &nbsp;<%= link_to 'Log Out', logout_path, method: :delete %></p>
-      </div>
+    <% if logged_in? %>
+      <div class="nav-thirds"><p>Hi, <%= current_user.name %> &nbsp; | &nbsp;<small class="white"><%= link_to 'My Page', user_path(current_user) %></small> &nbsp;| &nbsp;<small class="white"><%= link_to 'Log Out', logout_path, method: :delete %></small></p></div>
+      <div class="nav-thirds"> <span id= "gr8date-logo"><h2> GR8DATE </h2></span> </div>
+      <div class="nav-thirds"><span class= "nav navbar-nav navbar-right"> <%= link_to 'Plan a new date', new_plan_path %> </span></div>
   <% else %>
       <div>
         <%= link_to 'Log In', login_path %> | <%= link_to 'Sign up', new_user_path %>
+        <div class="nav-thirds"> <span id= "gr8date-logo"><h2> GR8DATE </h2></span> </div>
       </div>    
     <% end %>
   </div>
