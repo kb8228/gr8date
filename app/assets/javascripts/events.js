@@ -49,10 +49,14 @@ $(document).ready(function(){
     var eventImg = data.image_url;
     // this is what we will include in individual event box
     var listItem = "<div class='item-box'>";
-    listItem += "<h3>" + eventName + "</h3></div>"; //finish this div
+    listItem += "<h3>" + eventName + "</h3>";
+    listItem += "<p>where: &nbsp;" + venueName + "</p>";
+    listItem += "<p>when: &nbsp;" + eventTime + "</p>";
+    listItem += "<img class='img-thumb' src='" + eventImg + "'>";
+    listItem += "<div class='info-link'><p>info</p></div></div>"; //finish this div
 
     // we will put our event stuff in <li>'s:
-    jqElem.append("<li class='event-click' id='" + eventId + "'>" + listItem + "</li>");   
+    jqElem.append("<li class='event-click' id='" + eventId + "'>" + listItem + "</li>");  
   }; // AddEvent END
 
     // here we set plan's event_id on click:
@@ -72,5 +76,11 @@ $(document).ready(function(){
           console.log(err);
         }
       })
+    });
+
+    $("#event-list").on('click', '.info-link', function(){
+      //this works:
+      //alert("info link clicked");
+      // WORK ON redirecting to event show page!!!
     });
 }); //doc ready ends

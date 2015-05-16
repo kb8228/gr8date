@@ -14,7 +14,7 @@
   <div class="container">
     <div>
       <% if logged_in? %>
-      <p>Hi, <%= current_user.name %> | <%= link_to 'Log Out', logout_path, method: :delete %></p>
+      <p>Hi, <%= current_user.name %> &nbsp; | &nbsp;<%= link_to 'My Page', user_path(current_user) %> &nbsp;| &nbsp;<%= link_to 'Log Out', logout_path, method: :delete %></p>
       </div>
   <% else %>
       <div>

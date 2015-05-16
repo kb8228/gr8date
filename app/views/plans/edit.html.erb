@@ -1,6 +1,5 @@
-<h1></h1> <!-- # this is here for spacing only - page needs styling  -->
-<section>
-  <h3><span id="date"><%= @plan.date %></span> | <%= @plan.location %></h3>
+<section class="top75">
+  <h2><span id="date"><%= @plan.date %></span> | <%= @plan.location %></h2>
 </section>
 
 <section id="event-section">
@@ -15,4 +14,4 @@
 
 <div class="form-group">
   <%= link_to "Done", plan_path(@plan), class: "btn btn-primary" %>
-</div>
+</div><br>
