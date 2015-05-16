@@ -45,7 +45,7 @@ $(document).ready(function(){
     listItem += "<p>" + dinnerAddress + "</p>";
     listItem += "<p>" + dinnerPhone + "</p>";
     listItem += "<img class='img-thumb' src='" + dinnerImg + "'>";
-    listItem += "<div class='info-link'><p>info</p></div></div>";
+    listItem += "<div class='info-link' id='" + dinnerId + "'><p>info</p></div></div>";
 
     jqElem.append("<li class='dinner-click' id='" + dinnerId + "'>" + listItem + "</li>");   
   }; // AddDinner END
@@ -66,6 +66,11 @@ $(document).ready(function(){
         console.log(err);
       }
     })
+  });
+
+  $("#dinner-list").on('click', '.info-link', function(){
+    var id = $(this).attr('id');
+    window.location.pathname = "/dinners/" + id;
   });
 
 });

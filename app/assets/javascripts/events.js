@@ -53,7 +53,7 @@ $(document).ready(function(){
     listItem += "<p>where: &nbsp;" + venueName + "</p>";
     listItem += "<p>when: &nbsp;" + eventTime + "</p>";
     listItem += "<img class='img-thumb' src='" + eventImg + "'>";
-    listItem += "<div class='info-link'><p>info</p></div></div>"; //finish this div
+    listItem += "<div class='info-link' id='" + eventId + "'><p>info</p></div></div>"; //finish this div
 
     // we will put our event stuff in <li>'s:
     jqElem.append("<li class='event-click' id='" + eventId + "'>" + listItem + "</li>");  
@@ -79,8 +79,7 @@ $(document).ready(function(){
     });
 
     $("#event-list").on('click', '.info-link', function(){
-      //this works:
-      //alert("info link clicked");
-      // WORK ON redirecting to event show page!!!
+      var id = $(this).attr('id');
+      window.location.pathname = "/events/" + id;
     });
 }); //doc ready ends
