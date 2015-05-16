@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <title>Gr8date</title>
@@ -14,8 +14,10 @@
   <div class="container">
     <div>
       <% if logged_in? %>
-      <p>Hi, <%= current_user.name %> &nbsp; | &nbsp;<%= link_to 'My Page', user_path(current_user) %> &nbsp;| &nbsp;<%= link_to 'Log Out', logout_path, method: :delete %></p>
-      </div>
+      <p>Hi, <%= current_user.name %> &nbsp; | &nbsp;<%= link_to 'My Page', user_path(current_user) %> &nbsp;| &nbsp;<%= link_to 'Log Out', logout_path, method: :delete %>
+      <span class= "nav navbar-nav navbar-right"> <%= link_to 'Plan a new date', new_plan_path %> </span>
+      </p>
+    </div>
   <% else %>
       <div>
         <%= link_to 'Log In', login_path %> | <%= link_to 'Sign up', new_user_path %>
