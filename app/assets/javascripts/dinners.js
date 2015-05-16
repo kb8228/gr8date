@@ -41,7 +41,11 @@ $(document).ready(function(){
     var dinnerImg = data.image_url;
 
     var listItem = "<div class='item-box'>";
-    listItem += "<h3>" + dinnerName + "</h3></div>"; //finish this div
+    listItem += "<h3>" + dinnerName + "</h3>";
+    listItem += "<p>" + dinnerAddress + "</p>";
+    listItem += "<p>" + dinnerPhone + "</p>";
+    listItem += "<img class='img-thumb' src='" + dinnerImg + "'>";
+    listItem += "<div class='info-link'><p>info</p></div></div>";
 
     jqElem.append("<li class='dinner-click' id='" + dinnerId + "'>" + listItem + "</li>");   
   }; // AddDinner END

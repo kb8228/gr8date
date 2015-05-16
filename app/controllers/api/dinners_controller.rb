@@ -38,9 +38,9 @@ module API
   #     redirect_to dinners_path
   #   end
 
-  #   private
-  #   def dinner_params
-  #     params.require(:dinner).permit(:plan_id, :date, :time, :location)
-  #   end
+    private
+    def dinner_params
+      params.require(:dinner).permit(:name, :address, :phone_number, :cuisine, :alcohol, :hours, :image_url)
+    end
   end
 end
