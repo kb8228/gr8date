@@ -1,7 +1,10 @@
 // Place all the behaviors and hooks related to the matching controller here.
 
 $(document).ready(function(){
-  var API_BASE = "/api/dinners/";
+  var planCuisine = $("#cuisine").text();
+  console.log(planCuisine); 
+  var API_BASE = "/api/dinners/?cuisine=" + planCuisine;
+  console.log(API_BASE);
   var pathname = window.location.pathname;
   pathname = pathname.replace('/edit', '');
 
@@ -28,7 +31,7 @@ $(document).ready(function(){
   //console.log(json);
 
   function addDinner(jqElem, data){
-    var dinnerId = data.id;
+    var dinnerId = data.id;// THIS LINE - CONSOLE ERROR - Cannot read property 'id' of undefined
     var dinnerName = data.name;
     var dinnerCuisine = data.cuisine
     var dinnerHours = data.hours;

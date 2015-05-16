@@ -2,7 +2,7 @@ module API
   class DinnersController < ApplicationController
 
     def index
-      render json: Dinner.all
+      render json: Dinner.where(cuisine: params[:cuisine])
     end
 
     def show

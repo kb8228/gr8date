@@ -20,7 +20,7 @@ module API
 
     private
     def plan_params
-        params.require(:plan).permit(:user_id, :date, :location, :category, :cuisine, :event_id)
+        params.require(:plan).permit(:user_id, :date, :location, :category, :cuisine, :event_id, :dinner_id)
     end
   end
 end
