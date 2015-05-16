@@ -1,3 +1,42 @@
-<h1>Date: <%= @plan.date.strftime("%a, %b %-d %Y") %> </h1>
-<h1> Location: <%= @plan.location %> </h1>
+
+<div class="containerboxers">
+  <div class="thumbnail">
+    <div class="caption">
+
+        <div class="splitbox">
+          <div class="row">
+          <h3 class="reviewsummary">Date: <%= @plan.date.strftime("%a, %b %-d %Y") %></h3>
+          <h3 class="reviewsummary">Location: <%= @plan.location %> </h3><hr>
+          
+
+          <div class="col-md-6" id="box1">
+            <div id="SummaryEvent">
+              <h3 class="reviewsummary">Event</h3>
+                <img src= <%= @plan.event.image_url %> image_urlwidth="100%"><br>
+                <%= @plan.event.event_name %><br>
+                <%= @plan.event.address %>
+
+              <div class="detailsbtns"><%= link_to "Details", event_path(@plan.event), class: "btn btn-primary btn-lg"%></div><br> 
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div id="SummaryDinner">
+              <h3 class="reviewsummary">Dinner</h3>
+                  <img src= <%= @plan.dinner.image_url %> image_urlwidth="100%"><br>
+                  <%= @plan.dinner.name %><br>
+                  <%= @plan.dinner.address %>
+              <div class="detailsbtns"><%= link_to "Details", dinner_path(@plan.dinner), class: "btn btn-primary btn-lg"%></div><br>             
+            </div>
+          </div>
+        </div>
+        <hr>
+          <div class="form-group">
+            <%= link_to "Back", :back, class: "btn btn-primary btn-lg" %>
+          </div>
+    </div>
+  </div>
+</div>
+
+
 

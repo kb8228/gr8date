@@ -69,7 +69,7 @@ dinners = Dinner.create([
     phone_number: "(310) 587-2777",
     alcohol:"Yes",
     cuisine: "Salads & Sandwiches",
-    image_url: "http://www.tendergreens.com/Thumbs/286x170/files/zc/marinasign2_97457.jpg"
+    image_url: "http://www.farmplate.com/sites/default/files/resize/tender_greens-714x475.jpg"
   },
   {id: 3,
     name: "Mercado",
@@ -262,7 +262,7 @@ events = Event.create([
     phone: "310-394-9779",
     category: "theater", 
     venue_url: "http://santaMonicaplayhouse.com",
-    image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/GNo2rqW-mNXQns5nGd4acg/l.jpg"
+    image_url: "http://www.hebrewhillbilly.com/pictures2/rzmaks_10220134.jpg"
   },
 
   { id: 3,
