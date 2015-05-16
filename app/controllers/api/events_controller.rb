@@ -10,4 +10,9 @@ module API
       render json: Event.find(params[:id])
     end
   end
+
+  private
+    def event_params 
+      params.require(:event).permit(:event_name, :event_date, :event_time, :venue_name, :address, :phone, :category, :venue_url, :image_url)
+    end
 end
