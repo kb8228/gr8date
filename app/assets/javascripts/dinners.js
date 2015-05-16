@@ -31,7 +31,7 @@ $(document).ready(function(){
   //console.log(json);
 
   function addDinner(jqElem, data){
-    var dinnerId = data.id;
+    var dinnerId = data.id;// THIS LINE - CONSOLE ERROR - Cannot read property 'id' of undefined
     var dinnerName = data.name;
     var dinnerCuisine = data.cuisine
     var dinnerHours = data.hours;
@@ -41,7 +41,11 @@ $(document).ready(function(){
     var dinnerImg = data.image_url;
 
     var listItem = "<div class='item-box'>";
-    listItem += "<h3>" + dinnerName + "</h3></div>"; //finish this div
+    listItem += "<h3>" + dinnerName + "</h3>";
+    listItem += "<p>" + dinnerAddress + "</p>";
+    listItem += "<p>" + dinnerPhone + "</p>";
+    listItem += "<img class='img-thumb' src='" + dinnerImg + "'>";
+    listItem += "<div class='info-link' id='" + dinnerId + "'><p>info</p></div></div>";
 
     jqElem.append("<li class='dinner-click' id='" + dinnerId + "'>" + listItem + "</li>");   
   }; // AddDinner END
@@ -62,6 +66,11 @@ $(document).ready(function(){
         console.log(err);
       }
     })
+  });
+
+  $("#dinner-list").on('click', '.info-link', function(){
+    var id = $(this).attr('id');
+    window.location.pathname = "/dinners/" + id;
   });
 
 });

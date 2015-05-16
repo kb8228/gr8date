@@ -1,18 +1,17 @@
-<h1></h1> <!-- # this is here for spacing only - page needs styling  -->
-<section>
-  <h3><%= @plan.date %> | <%= @plan.location %></h3>
+<section class="top75">
+  <h2><span id="date"><%= @plan.date %></span> | <%= @plan.location %></h2>
 </section>
 
 <section id="event-section">
-  <h3>Pick your <%= @plan.category %> event:</h3>
+  <h3>Pick your event - <span id="category"><%= @plan.category %></span>:</h3>
   <ul id="event-list"></ul>
 </section>
 
 <section id="dinner-section">
-  <h3>Pick your <%#= @plan.cuisine %> restaurant:</h3>
+  <h3>Pick your restaurant - <span id="cuisine"><%= @plan.cuisine %></span> cuisine:</h3>
   <ul id="dinner-list"></ul>
 </section>
 
 <div class="form-group">
   <%= link_to "Done", plan_path(@plan), class: "btn btn-primary" %>
-</div>
+</div><br>

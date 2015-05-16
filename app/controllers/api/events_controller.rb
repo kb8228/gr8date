@@ -3,7 +3,7 @@ module API
     #before_action :set_event, only: [:show, :edit, :update, :destroy]
 
     def index
-      render json: Event.all
+      render json: Event.where(category: params[:category], event_date: params[:event_date])
     end
 
     def show

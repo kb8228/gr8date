@@ -1,27 +1,17 @@
 $(document).ready(function(){
+
+  var planDate = $("#date").text();
+  console.log(planDate);
+  var planCategory = $("#category").text();
+  console.log(planCategory);
   //this is where we pull our events from:
-  var API_BASE = "/api/events/";
+  var API_BASE = "/api/events/?category=" + planCategory + "&event_date=" + planDate;
+  console.log(API_BASE);
   //this picks up the plan's url '/plans/:id/edit':
   var pathname = window.location.pathname;
   // this chops off '/edit':
   pathname = pathname.replace('/edit', '');
   //console.log(pathname);
-              // var planEventCategory;
-
-  //             // // finding Plan's event category
-  // var planCategory = $.ajax({
-  //   datatype: 'json',
-  //   type: 'GET',
-  //   url: '/api' + pathname,
-  //   data: {}
-  // })
-
-  // planCategory.done(function(data){
-  //   console.log(data);
-  // });
-  // planCategory.fail(function(data){
-  //   $('event-section').html("<h2>Events failed to load.</h2>");
-  // });
 
   //this is our events' index in json
   var json = $.ajax({
@@ -31,7 +21,7 @@ $(document).ready(function(){
     data: {}
   });
 
-  // when server responce is received, this is what we do with returned data:
+  // when event index comes back, we run addEvent (to <li>'s):
   json.done(function(data){
     var i;
     for(i=0; i<6; i++){
@@ -47,7 +37,7 @@ $(document).ready(function(){
   //console.log(json);
 
   function addEvent(jqElem, data){
-    var eventId = data.id;
+    var eventId = data.id; // THIS LINE - CONSOLE ERROR - Cannot read property 'id' of undefined
     var eventName = data.event_name;
     var eventDate = data.event_date;
     var eventTime = data.event_time;
@@ -59,10 +49,14 @@ $(document).ready(function(){
     var eventImg = data.image_url;
     // this is what we will include in individual event box
     var listItem = "<div class='item-box'>";
-    listItem += "<h3>" + eventName + "</h3></div>"; //finish this div
+    listItem += "<h3>" + eventName + "</h3>";
+    listItem += "<p>where: &nbsp;" + venueName + "</p>";
+    listItem += "<p>when: &nbsp;" + eventTime + "</p>";
+    listItem += "<img class='img-thumb' src='" + eventImg + "'>";
+    listItem += "<div class='info-link' id='" + eventId + "'><p>info</p></div></div>"; //finish this div
 
     // we will put our event stuff in <li>'s:
-    jqElem.append("<li class='event-click' id='" + eventId + "'>" + listItem + "</li>");   
+    jqElem.append("<li class='event-click' id='" + eventId + "'>" + listItem + "</li>");  
   }; // AddEvent END
 
     // here we set plan's event_id on click:
@@ -82,5 +76,10 @@ $(document).ready(function(){
           console.log(err);
         }
       })
+    });
+
+    $("#event-list").on('click', '.info-link', function(){
+      var id = $(this).attr('id');
+      window.location.pathname = "/events/" + id;
     });
 }); //doc ready ends
