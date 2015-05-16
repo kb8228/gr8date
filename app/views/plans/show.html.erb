@@ -1,83 +1,35 @@
-<h1>Date: <%= @plan.date.strftime("%a, %b %-d %Y") %> </h1>
-<h1> Location: <%= @plan.location %> </h1>
+<div class="containerboxers">
+  <div class="thumbnail">
+    <div class="caption">
 
-<h1>Choose an event:</h1>
+        <div class="splitbox">
+          <div class="row">
+          <h3 class="reviewsummary">Date: <%= @plan.date.strftime("%a, %b %-d %Y") %></h3>
+          <h3 class="reviewsummary">Location: <%= @plan.location %> </h3><hr>
+          
 
-
-<div class="containerboxers"> 
-    <div class="row">
-      <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-          <div class="caption">
-            <h3>Theatre</h3>
-            <hr>
-            <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-sports-hobbies/044449-glossy-black-icon-sports-hobbies-ball-basketball.png" alt="icon" style="width:150px;height:150px">
-            <p><a href="#" class="btn btn-primary btn-lg" role="button">Select</a></p>
+          <div class="col-md-6" id="box1">
+            <div id="SummaryEvent">
+              <h3 class="reviewsummary">Event</h3>
+                <img src= <%= @plan.event.image_url %> image_urlwidth="100%"><br>
+                <%= @plan.event.event_name %><br>
+                <%= @plan.event.address %>
+              <p class="big_blue_button"><a href="#" class="btn btn-primary btn-lg" role="button">Details</a></p> 
+            </div>
           </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-          <div class="caption">
-            <h3>Music</h3>
-            <hr>
-            <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-sports-hobbies/044449-glossy-black-icon-sports-hobbies-ball-basketball.png" alt="icon" style="width:150px;height:150px">
-            <p><a href="#" class="btn btn-primary btn-lg" role="button">Select</a></p>
+          <div class="col-md-6">
+            <div id="SummaryDinner">
+              <h3 class="reviewsummary">Dinner</h3>
+                  <img src= <%= @plan.dinner.image_url %> image_urlwidth="100%"><br>
+                  <%= @plan.dinner.name %><br>
+                  <%= @plan.dinner.address %>
+              <p class="big_blue_button"><a href="#" class="btn btn-primary btn-lg" role="button">Details</a></p>              
+            </div>
           </div>
-      </div>
+        </div>
+        <hr>
+        <p class="big_blue_button"><a href="#" class="btn btn-primary btn-lg" role="button">Back</a></p>
     </div>
-
-<<<<<<< HEAD
-</div>
-=======
-    <div class="row">
-      <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-          <div class="caption">
-            <h3>Comedy</h3>
-            <hr>
-            <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-sports-hobbies/044449-glossy-black-icon-sports-hobbies-ball-basketball.png" alt="icon" style="width:150px;height:150px">
-            <p><a href="#" class="btn btn-primary btn-lg" role="button">Select</a></p>
-          </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-          <div class="caption">
-            <h3>Film</h3>
-            <hr>
-            <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-sports-hobbies/044449-glossy-black-icon-sports-hobbies-ball-basketball.png" alt="icon" style="width:150px;height:150px">
-            <p><a href="#" class="btn btn-primary btn-lg" role="button">Select</a></p>
-          </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-          <div class="caption">
-            <h3>Sports</h3>
-            <hr>
-            <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-sports-hobbies/044449-glossy-black-icon-sports-hobbies-ball-basketball.png" alt="icon" style="width:150px;height:150px">
-            <p><a href="#" class="btn btn-primary btn-lg" role="button">Select</a></p>
-          </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-          <div class="caption">
-            <h3>Other</h3>
-            <hr>
-            <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-sports-hobbies/044449-glossy-black-icon-sports-hobbies-ball-basketball.png" alt="icon" style="width:150px;height:150px">
-            <p><a href="#" class="btn btn-primary btn-lg" role="button">Select</a></p>
-          </div>
-      </div>
-    </div>
-
+  </div>
 </div>

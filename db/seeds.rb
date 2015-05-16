@@ -69,7 +69,7 @@ dinners = Dinner.create([
     phone_number: "(310) 587-2777",
     alcohol:"Yes",
     cuisine: "Salads & Sandwiches",
-    image_url: "http://www.tendergreens.com/Thumbs/286x170/files/zc/marinasign2_97457.jpg"
+    image_url: "http://www.farmplate.com/sites/default/files/resize/tender_greens-714x475.jpg"
   },
   {id: 3,
     name: "Mercado",
@@ -243,7 +243,7 @@ Event.destroy_all
 events = Event.create([
   { id: 1,
     event_name: "The LAF Supper",
-    event_date: "5-2-15", 
+    event_date: "2015-05-20", 
     event_time: "8:30 PM",
     venue_name: "Santa Monica Playhouse",
     address: "1211 4th St, Santa Monica, CA 90401",
@@ -255,19 +255,19 @@ events = Event.create([
 
   { id: 2,
     event_name: "Almost Perfect",
-    event_date: "5/9/15", 
+    event_date: "2015-05-20", 
     event_time: "7:30 PM",
     venue_name: "Santa Monica Playhouse",
     address: "1211 4th St, Santa Monica, CA 90401",
     phone: "310-394-9779",
     category: "theater", 
     venue_url: "http://santaMonicaplayhouse.com",
-    image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/GNo2rqW-mNXQns5nGd4acg/l.jpg"
+    image_url: "http://www.hebrewhillbilly.com/pictures2/rzmaks_10220134.jpg"
   },
 
   { id: 3,
     event_name: "Avengers: Age of Ultron",
-    event_date: "5/8/15",
+    event_date: "2015-05-20",
     event_time: "8:00 PM",
     venue_name: "AMC Santa Monica 7", 
     address: "1310 3rd St, Santa Monica, CA 90401",
@@ -279,7 +279,7 @@ events = Event.create([
 
   { id: 4,
     event_name: "Furious 7",
-    event_date: "5/9/15",
+    event_date: "2015-05-20",
     event_time: "7:45 PM",
     venue_name: "AMC Santa Monica 7",
     address: "1310 3rd St, Santa Monica, CA 90401",
@@ -291,7 +291,7 @@ events = Event.create([
 
   { id: 5,
     event_name: "Get Hard", 
-    event_date: "5/15/15",
+    event_date: "2015-05-20",
     event_time: "6:45 PM",
     venue_name: "AMC Santa Monica 7", 
     address: "1310 3rd St, Santa Monica, CA 90401",
@@ -303,7 +303,7 @@ events = Event.create([
 
   { id: 6,
     event_name: "Rocky Horror Picture Show",
-    event_date: "5/15/15", 
+    event_date: "2015-05-20", 
     event_time: "12:00 AM", 
     venue_name: "Nuart Theater",
     address: "11272 Santa Monica Blvd, Los Angeles, CA 90067", 
@@ -315,7 +315,7 @@ events = Event.create([
 
   { id: 7,
     event_name: "Back to the Future",
-    event_date: "5/17/15",
+    event_date: "2015-05-20",
     event_time: "12:00 AM",
     venue_name: "Nuart Theater",
     address: "1272 Santa Monica Blvd, Los Angeles, CA 90067",
@@ -327,7 +327,7 @@ events = Event.create([
 
   { id: 8,
     event_name: "Alien",
-    event_date: "5/22/15", 
+    event_date: "2015-05-20", 
     event_time: "12:00 AM",
     venue_name: "Nuart Theater",
     address: "1272 Santa Monica Blvd, Los Angeles, CA 90067",
@@ -339,7 +339,7 @@ events = Event.create([
 
   { id: 9,
     event_name: "Diavolo", 
-    event_date: "5/2/15", 
+    event_date: "2015-05-20", 
     event_time: "7:30 PM",
     venue_name: "The Broad Stage", 
     address: "90401, 1310 11th St, Santa Monica, CA 90401",
@@ -351,7 +351,7 @@ events = Event.create([
 
   { id: 10,
     event_name: "Joyce DiDonato", 
-    event_date: "5/15/15", 
+    event_date: "2015-05-20", 
     event_time: "7:30 PM",
     venue_name: "The Broad Stage", 
     address: "90401, 1310 11th St, Santa Monica, CA 90401", 
@@ -363,7 +363,7 @@ events = Event.create([
 
   { id: 11,
     event_name: "Joyce DiDonato",
-    event_date: "5/16/15",
+    event_date: "2015-05-20",
     event_time: "7:30 PM",
     venue_name: "The Broad Stage", 
     address: "90401, 1310 11th St, Santa Monica, CA 90401",
@@ -375,7 +375,7 @@ events = Event.create([
 
   { id: 12,
     event_name: "Little Miss Nasty", 
-    event_date: "5/7/15",
+    event_date: "2015-05-20",
     event_time: "8:00 PM",
     venue_name: "Harvelle's",
     address: "1432 4th St, Santa Monica, CA 90401",
@@ -387,7 +387,7 @@ events = Event.create([
 
   { id: 13,
     event_name: "Andy Frasco", 
-    event_date: "5/16/15",
+    event_date: "2015-05-20",
     event_time: "7:30 PM",
     venue_name: "Harvelle's", 
     address: "1432 4th St, Santa Monica, CA 90401",

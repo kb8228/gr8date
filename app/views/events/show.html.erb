@@ -2,11 +2,11 @@
 
   <div class="thumbnail">
       <div class="caption">
-        <h2>Dinner Details</h2>
+        <h2>Events Details</h2>
         <hr>
         <div class="splitbox">
         <div class="row">
-            <div class="col-md-6" id="rule">
+            <div class="col-md-6" id="box1">
             <div class="detailimage">
                 <img src= <%= @event.image_url %> image_urlwidth="100%">
             </div>
@@ -20,7 +20,7 @@
                 <%= @event.address %><br>
                 <%= @event.phone %><br>
                 <%= @event.category %><br>
-                <a href= <%= @event.venue_url %> ><%= @event.venue_url %></a><br>
+                <div class="link"><a href= <%= @event.venue_url %> ><%= @event.venue_url %></a></div><br>
             </div>
             </div>
 

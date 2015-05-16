@@ -1,4 +1,6 @@
- <div class="signupbox">
+
+<div class="signupbox">
+
   <h1>Plan a new date</h1>
 
   <%= form_for @plan do |f| %>
@@ -18,6 +20,7 @@
       <label for="sel1">
         Select an event type:
       </label>
+
       <%= f.select(:event, options_for_select(Event.categories), {}, {:class => "form-control"}) %> 
     </div>
     
@@ -25,10 +28,13 @@
       <label for="sel1">
         Select a cuisine:
       </label>
+
       <%= f.select(:dinner, options_for_select(Dinner.cuisines), {}, {:class => "form-control"}) %><br><br>
 
     <div class="form-group" id="planbtn">
       <%= f.submit "Plan my date", class: "btn btn-primary"  %>
+
+
     </div> 
 
   <% end %>
