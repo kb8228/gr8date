@@ -14,8 +14,9 @@
   <div class="container">
     <div>
       <% if logged_in? %>
-      <p>Hi, <%= current_user.name %> &nbsp; | &nbsp;<%= link_to 'My Page', user_path(current_user) %> &nbsp;| &nbsp;<%= link_to 'Log Out', logout_path, method: :delete %>
-      <span class= "nav navbar-nav navbar-right"> <%= link_to 'Plan a new date', new_plan_path %> </span>
+      <div class="nav-thirds"><p class=".navbar-center">Hi, <%= current_user.name %> &nbsp; | &nbsp;<%= link_to 'My Page', user_path(current_user) %> &nbsp;| &nbsp;<%= link_to 'Log Out', logout_path, method: :delete %></p></div>
+      <div class="nav-thirds"> <span id= "gr8date-logo"><h2> GR8DATE </h2></span> </div>
+      <div class="nav-thirds"><span class= "nav navbar-nav navbar-right"> <%= link_to 'Plan a new date', new_plan_path %> </span></div>
       </p>
     </div>
   <% else %>
