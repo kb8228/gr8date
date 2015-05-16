@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
 
-  root "plans#new"
-  
+  get 'welcome/index'
 
-  #root "plans#new"
-  # User routes
-
+  root "welcome#index"
 
   # User routes:
   get "users" => "users#index"

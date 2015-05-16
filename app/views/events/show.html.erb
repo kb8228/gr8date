@@ -20,13 +20,14 @@
                 <%= @event.address %><br>
                 <%= @event.phone %><br>
                 <%= @event.category %><br>
-                <a href= <%= @event.venue_url %> ><%= @event.venue_url %></a><br>
+                <a href=<%= @event.venue_url %> ><%= @event.venue_url %></a><br>
             </div>
             </div>
 
       </div><hr>
-            <p class="big_blue_button"><a href="#" class="btn btn-primary btn-lg" role="button">Back</a></p>
-
+          <div class="form-group">
+            <%= link_to "Back", :back, class: "btn btn-primary btn-lg" %>
+          </div>
       </div>
 </div>
 
