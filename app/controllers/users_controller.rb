@@ -53,4 +53,19 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :location)
   end
+
+  def require_login
+    unless logged_in?
+      flash[:error] = "Please log in or sign up to access this page."
+      redirect_to login_path
+    end
+  end
+
+  def authorized?
+    unless current_user == User.find(params[:id])
+      flash[:error] = "You are not authorized to access that page."
+      redirect_to user_path(current_user)
+    end
+  end
+
 end
