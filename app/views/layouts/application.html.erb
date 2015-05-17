@@ -14,13 +14,13 @@
   <div class="container">
     <% if logged_in? %>
       <div class="col-sm-5 nav-thirds"><p>Hi, <%= current_user.name %> &nbsp; | &nbsp;<small class="white"><%= link_to 'My Page', user_path(current_user) %></small> &nbsp;| &nbsp;<small class="white"><%= link_to 'Log Out', logout_path, method: :delete %></small></p></div>
-      <div class="col-sm-3 nav-thirds"> <span id= "gr8date-logo"><h2 class="nav-thirds"> GR8DATE </h2></span> </div>
-      <div class="col-sm-4 nav-thirds"><span class= "nav navbar-nav navbar-right"> <%= link_to 'Plan a new date', new_plan_path %> </span></div>
+      <div class="col-sm-2 nav-thirds"> <span id= "gr8date-logo"><h2 class="nav-thirds"> GR8DATE </h2></span> </div>
+      <div class="col-sm-5 nav-thirds"><span class= "nav navbar-nav navbar-right"> <%= link_to 'Plan a new date', new_plan_path %> </span></div>
   <% else %>
-      <div class="nav-thirds">
+      <div class="col-sm-5 nav-thirds">
         <%= link_to 'Log In', login_path %> | <%= link_to 'Sign up', new_user_path %>
-        <div class="nav-thirds"> <span id= "gr8date-logo"><h2> GR8DATE </h2></span> </div>
-      </div>    
+      </div>
+      <div class="col-sm-2 nav-thirds"> <span id= "gr8date-logo"><h2 class="nav-thirds"> GR8DATE </h2></span> </div>    
     <% end %>
   </div>
 </nav>
