@@ -10,7 +10,6 @@ module API
 
     def update
       plan = Plan.find(params[:id])
-      #event = Event.find(params[:event_id])
       if plan.update(plan_params)
         render json: Plan.find(plan.id), status: 202
       else
