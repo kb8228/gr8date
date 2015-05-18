@@ -35,7 +35,7 @@ $(document).ready(function(){
     var dinnerName = data.name;
     var dinnerCuisine = data.cuisine
     var dinnerHours = data.hours;
-    var dinnerAddress = data.address;
+    var dinnerAddress = data.address.replace(" Santa Monica", "");
     var dinnerPhone = data.phone_number;
     var dinnerAlcohol = data.alcohol;
     var dinnerImg = data.image_url;
@@ -65,7 +65,7 @@ $(document).ready(function(){
       error: function(err){
         console.log(err);
       }
-    })
+    });
   });
 
   $("#dinner-list").on('click', '.info-link', function(){

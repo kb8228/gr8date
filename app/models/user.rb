@@ -1,13 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :plans
+  has_many :plans, dependent: :destroy
   before_save :format_user_input
-  #has_secure_password 
-  #- read up on this and maybe use instead of authenticate?
-  #it replaces attr_reader too
-  #it replaces PW setter method, it replaces authenticate method
-  #it replaces PW validations for presence and confirmation
-  #don't need to change authenticate method in sessions controller
-  
   attr_reader :password
 
 

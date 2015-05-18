@@ -1,0 +1,28 @@
+<div class="body-container">
+  <section class="col-sm-4">
+    <h3>Your profile:</h3><br>
+    <div class="item-box">
+    <br>
+    <h4>&nbsp; &nbsp; Name: <%= @user.name %></h4>
+    <h4>&nbsp; &nbsp; Email: <%= @user.email %></h4><br>
+    <h3><%= link_to "Update info", edit_user_path(current_user), class: "btn btn-primary detailsbtns" %></h3>
+    <h3><%= link_to "Delete profile", user_path(current_user), method: :delete, data: {confirm: "Are you sure? All your date plans will be gone, too!"}, class: "btn btn-danger detailsbtns"%></h3>
+    </div>
+  </section>
+  <section class="col-sm-8">
+    <h3>Your date plans:</h3><br>
+    <% @user.plans.each do |plan| %>
+      <div class="col-sm-5 item-box plan-list-box">
+        <h3 class="centertext"><%= plan.date %></h3>
+        <p class="centertext">Event:</p>
+        <h3 class="centertext"><%= plan.event.event_name %></h3>
+        <p class="centertext"><%= plan.event.category %></p>
+        <hr>
+        <p class="centertext">Dinner:</p>
+        <h3 class="centertext"><%= plan.dinner.name %></h3>
+        <p class="centertext"><%= plan.dinner.cuisine %></p>
+        <h3><%= link_to "Details", plan_path(plan), class: "btn btn-primary detailsbtns" %></h3>
+      </div>
+    <% end %>
+  </section>
+</div>
